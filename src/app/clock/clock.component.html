@@ -16,7 +16,7 @@
         <input class="clock ss input" id="inputSS" type="text" *ngIf="showInputSS" [(ngModel)]="inputSS">
         &nbsp;
         <span class="clock a" *ngIf="!showInputA" (click)="clickA()">{{isAM ? "AM":"PM"}}</span>
-        <select class="clock a input" id="inputA" type="text" *ngIf="showInputA" [(ngModel)]="inputA" [value]="a">
+        <select class="clock a select" id="inputA" type="text" *ngIf="showInputA" [(ngModel)]="inputA" [value]="a">
             <option value="AM">AM</option>
             <option value="PM">PM</option>
         </select>
