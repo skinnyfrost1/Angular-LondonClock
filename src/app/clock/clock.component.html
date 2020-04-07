@@ -1,0 +1,28 @@
+<div class="clock container">
+    <div class="clock title" >
+        {{title}}
+    </div>
+    <br/>
+    <div class="clock time">
+        <!-- {{now|date:'h:mm:ss a'}} -->
+
+        <span class="clock hh" *ngIf="!showInputHH" (click)="clickHH()">{{("00"+hh).slice(-2)}}</span>
+        <input class="clock hh input" id="inputHH" type="text" *ngIf="showInputHH" [(ngModel)]="inputHH">
+        :
+        <span class="clock mm" *ngIf="!showInputMM" (click)="clickMM()">{{("00"+mm).slice(-2)}}</span>
+        <input class="clock mm input" id="inputMM" type="text" *ngIf="showInputMM" [(ngModel)]="inputMM">
+        :
+        <span class="clock ss" *ngIf="!showInputSS" (click)="clickSS()">{{("00"+ss).slice(-2)}}</span>
+        <input class="clock ss input" id="inputSS" type="text" *ngIf="showInputSS" [(ngModel)]="inputSS">
+        &nbsp;
+        <span class="clock a" *ngIf="!showInputA" (click)="clickA()">{{isAM ? "AM":"PM"}}</span>
+        <select class="clock a input" id="inputA" type="text" *ngIf="showInputA" [(ngModel)]="inputA" [value]="a">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+        </select>
+
+        <div class="buttonContainer" *ngIf="showRollButton"><button (click)="clickRoll()">Let's roll!</button></div>
+    </div>
+    <div class="errorMessage">{{errorMessage}}</div>
+
+</div>

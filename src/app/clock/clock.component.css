@@ -1,0 +1,12 @@
+.errorMessage{
+    color:red;
+}
+.clock.container{
+    position:absolute;
+    border:solid;
+    border-width: 5px;
+    padding: 30px;
+    text-align: center;
+    
+
+}
